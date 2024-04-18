@@ -4,7 +4,7 @@ const Tasks = ()=>{
     const [tasks, setTasks] = useState([])
     const fetchTasks = async()=>{
         try{
-            const response = await fetch("http://localhost:5000/tasks")
+            const response = await fetch("https://working2-eaqw.onrender.com/tasks")
             const result = await response.json()
             setTasks(result)
         }catch(error){
@@ -17,7 +17,7 @@ const Tasks = ()=>{
 
     const deleteItem = async(id)=>{
         try{
-            const deletedItem = await fetch(`http://localhost:5000/delete/${id}`,{
+            const deletedItem = await fetch(`https://working2-eaqw.onrender.com/delete/${id}`,{
                 method: "DELETE"
             })
             if(deletedItem){

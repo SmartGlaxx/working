@@ -11,7 +11,7 @@ const UpdateTask = () => {
     });
     const fetchItems = async()=>{
         try{
-            const response = await fetch(`http://localhost:5000/tasks/${id}`)
+            const response = await fetch(`https://working2-eaqw.onrender.com/tasks/${id}`)
             const result = await response.json()
             setUpdateValues(result)
         }catch(error){
@@ -32,7 +32,7 @@ const UpdateTask = () => {
     }
     const updateItem = async()=>{
         try{
-            const response = await fetch(`http://localhost:5000/update/${id}`, {
+            const response = await fetch(`https://working2-eaqw.onrender.com/update/${id}`, {
                 method:"PATCH",
                 headers: {
                     "Content-Type" : "application/json"
@@ -72,7 +72,7 @@ export default UpdateTask
     
 //     const fetchItems = async () => {
 //         try {
-//             const response = await fetch(`http://localhost:5000/tasks/${id}`);
+//             const response = await fetch(`https://working2-eaqw.onrender.com/tasks/${id}`);
 //             const result = await response.json();
 //             setUpdateValues(result);
 //         } catch (error) {
@@ -95,7 +95,7 @@ export default UpdateTask
 
 //     const updateItem = async () => {
 //         try {
-//             const response = await fetch(`http://localhost:5000/update/${id}`, {
+//             const response = await fetch(`https://working2-eaqw.onrender.com/update/${id}`, {
 //                 method: "PATCH",
 //                 headers: {
 //                     "Content-Type": "application/json"
